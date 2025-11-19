@@ -17,16 +17,6 @@ class Patterns {
 	 */
 	private $categories = array();
 
-	/**
-	 * Register_Patterns constructor.
-	 */
-	public function __construct() {
-		$this->categories = array(
-			'burley'   => array( 'label' => __( 'Burley Theme Patterns', 'burley' ) ),
-			'bigupweb' => array( 'label' => __( 'Bigup Web Patterns', 'burley' ) ),
-		);
-	}
-
 
 	/**
 	 * Register block patterns categories.
@@ -34,6 +24,12 @@ class Patterns {
 	 * @return void
 	 */
 	public function register_categories() {
+
+		$this->categories = array(
+			'burley'   => array( 'label' => __( 'Burley Theme Patterns', 'burley' ) ),
+			'bigupweb' => array( 'label' => __( 'Bigup Web Patterns', 'burley' ) ),
+		);
+
 		foreach ( $this->categories as $slug => $args ) {
 			if ( WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $slug ) ) {
 				continue;

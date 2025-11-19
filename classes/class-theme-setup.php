@@ -35,6 +35,7 @@ class Theme_Setup {
 		add_action( 'wp_head', array( new Head_Inject(), 'print_head_markup' ), 5, 0 );
 		add_action( 'after_setup_theme', array( $this, 'theme_supports_and_features' ), 10, 0 );
 		add_action( 'init', array( $this, 'register_taxonomy_for_default_posts' ), 10, 0 );
+		add_action( 'init', array( $this, 'load_translations' ), 10, 0 );
 		self::remove_head_bloat();
 
 		add_action( 'init', array( new Patterns(), 'register_categories' ), 10, 0 );
@@ -93,7 +94,6 @@ class Theme_Setup {
 	 * Setup theme defaults and register support for WordPress features.
 	 */
 	public function theme_supports_and_features() {
-		load_theme_textdomain( 'burley', get_template_directory() . '/languages' );
 		add_theme_support( 'editor-styles' );
 		add_theme_support( 'block-template-parts' );
 		add_theme_support( 'wp-block-styles' );
@@ -128,6 +128,14 @@ class Theme_Setup {
 		// Custom image sizes.
 		add_image_size( 'page-hero', 1920, 1080, true );
 		add_image_size( 'service-cards', 700, 500, true );
+	}
+
+
+	/**
+	 * Handle theme translations.
+	 */
+	public function load_translations() {
+		load_theme_textdomain( 'burley', get_template_directory() . '/languages' );
 	}
 
 
