@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
 	"customTemplates": [
 		{ "name": "page-with-hero", "title": "Page with Hero Image", "postTypes": [ "page" ] },
 		{ "name": "page-no-title", "title": "Page without a Title", "postTypes": [ "page" ] },
@@ -69,6 +69,7 @@
 			"link": true
 		},
 		"typography": {
+			"defaultFontSizes": false,
 			"lineHeight": true,
 			"customFontSize": true,
 			"fontFamilies": [
@@ -117,6 +118,7 @@
 		},
 		"useRootPaddingAwareAlignments": true,
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"customSpacingSize": true,
 			"padding": true,
 			"margin": true,
