@@ -25,7 +25,13 @@ textarea {
 }
 
 input[type='submit'],
-button[type='submit'] {
+button,
+.wp-element-button,
+.wp-block-button__link {
 
 	@extend %button;
+
+	&:is( .is-style-outline>* ) {
+		@extend %button-outline;
+	}
 }

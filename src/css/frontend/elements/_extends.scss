@@ -1,9 +1,9 @@
 %input-base {
-	border-radius: var(--wp--custom--border-radius--large);
-	color: var(--wp--preset--color--bur-fg);
-	background-color: var(--wp--preset--color--bur-bg);
-	border: none;
-	cursor: pointer;
+	border-radius: var(--wp--custom--border-radius--large) !important;
+	color: var(--wp--preset--color--bur-fg) !important;
+	background-color: var(--wp--preset--color--bur-bg) !important;
+	border: none !important;
+	cursor: pointer !important;
 
 	&:disabled {
 		cursor: default;
@@ -22,7 +22,7 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	border-radius: var(--wp--custom--border-radius--large);
-	font-size: var(--wp--preset--font-size--medium);
+	font-size: inherit;
 	transition: all var(--wp--custom--transition--hover-time) ease-in-out;
 	cursor: pointer;
 
