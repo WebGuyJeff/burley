@@ -3,7 +3,7 @@
 button,
 .button,
 input[type="submit"] {
-	:hover {
+	&:hover {
 		border-radius: var(--wp--custom--border-radius--small)
 	}
 }
