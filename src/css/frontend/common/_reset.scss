@@ -54,27 +54,3 @@ body::-webkit-scrollbar-thumb {
 :focus-visible {
 	outline: -webkit-focus-ring-color auto 1px;
 }
-
-select {
-	text-transform: none;
-}
-
-input {
-	overflow: visible;
-}
-
-input,
-optgroup,
-select,
-textarea {
-	line-height: inherit;
-	font-family: inherit;
-	font-size: inherit;
-}
-
-input:hover:not(:disabled):not(.disabled),
-optgroup:hover:not(:disabled):not(.disabled),
-select:hover:not(:disabled):not(.disabled),
-textarea:hover:not(:disabled):not(.disabled) {
-	cursor: pointer;
-}

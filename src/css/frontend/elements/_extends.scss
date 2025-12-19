@@ -1,14 +1,41 @@
 %input-base {
-	border-radius: var(--wp--custom--border-radius--large) !important;
-	color: var(--wp--preset--color--bur-fg) !important;
-	background-color: var(--wp--preset--color--bur-bg) !important;
-	border: none !important;
-	cursor: pointer !important;
+	border-radius: var(--wp--custom--border-radius--large);
+	color: var(--wp--preset--color--bur-fg);
+	background-color: var(--wp--preset--color--bur-bg);
+	border: none;
+	transition: 0.15s;
 
 	&:disabled {
-		cursor: default;
 		pointer-events: none !important;
 		color: #8888;
+	}
+
+	// Hover / focus effects.
+
+	&:focus {
+		outline: solid 0.2em #6262ff;
+	}
+
+	&[rows], /* textarea */
+	&[type=text],
+	&[type=url],
+	&[type=tel],
+	&[type=email],
+	&[type=date],
+	&[type=month],
+	&[type=week],
+	&[type=time],
+	&[type=datetime-local],
+	&[type=number],
+	&[type=password] {
+		&:not(:invalid, :focus) {
+			outline: solid 0.2em #2dd436;
+		}
+	}
+
+	&:not(form[disabled] *, [disabled], :disabled, :focus):hover {
+		outline: solid 0.2em #ffff00;
+		cursor: text;
 	}
 }
 
@@ -29,6 +56,11 @@
 	&:hover {
 		border-radius: var(--wp--custom--border-radius--small);
 		box-shadow: var(--wp--preset--shadow--theme-soft);
+	}
+
+	&:disabled {
+		pointer-events: none !important;
+		color: #8888;
 	}
 }
 
