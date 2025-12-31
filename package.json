@@ -1,6 +1,6 @@
 {
 	"name": "burley",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "A small business theme.",
 	"dependencies": {
 		"@wordpress/block-editor": "^12.10.0",
